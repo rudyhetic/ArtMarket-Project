@@ -1,0 +1,49 @@
+
+
+header {
+    background: white;
+}
+
+main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#paypalBTN {
+    border: 1px solid black; 
+    border-radius: 5px;
+    padding: 50px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.illu {
+    width: 25%;
+}
+
+section {
+    text-align: center;
+  /*  border: solid 1px black; */
+}
+
+
+section img {
+    animation: slideIMG 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIMG {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

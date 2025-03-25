@@ -1,0 +1,98 @@
+*, html {
+
+    scroll-behavior: smooth !important;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+#lang {
+    display: flex;
+    justify-content: flex-end; /* Aligne le contenu à droite */
+    margin-right: 20px;
+    position: absolute;
+    top: 40px; /* Fais descendre l'image de 60 pixels */
+    right: 0; /* Assure que l'élément est aligné à droite de la page */
+    text-decoration: none;
+}
+
+#lang i {
+    padding-right: 5px;
+}
+
+#lang:hover {
+    color: #EADED2;
+}
+
+
+
+header {
+    text-align: center;
+}
+
+header img {
+    width: 90px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-evenly;
+}
+
+
+.header-container i:hover {
+    color: #EADED2;
+}
+
+header a {
+    font-size: 1.1em;
+    color: black;
+}
+#aboutme {
+    text-decoration: none;
+}
+
+#aboutme:hover {
+    color: #EADED2;
+}
+
+
+/* CONTACT */
+
+.contact a {
+    margin-left: 15px;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #B86A69;
+}
+
+
+.contact nav {
+    display: flex;
+    justify-content: left;
+}
+
+/* ============== */
+
+.container {
+    display: flex;
+    background: #EADED2;
+}
+
+.container section {
+    padding-left: 30px;
+    text-align: center;
+
+}
+
+.container p {
+    font-size: 1.5em;
+}
+
+.container img {
+    width: 800px;
+}

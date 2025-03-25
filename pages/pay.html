@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="pay.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+   <!--  <script src=" paypal ID "></script> -->
+</head>
+<body>
+    <header>
+        <a href="indexEN.html" id="lang"><i class="fa-solid fa-globe"></i>English</a>
+<div class="header-container">
+   
+    <a href="pay.html"><i class="fa-solid fa-paintbrush fa-lg"></i></a>
+    <a href="#" id="aboutme">PRESSE</a>
+      <a href="../index.html"> <img src="./IMG/logo2.png" alt="" width="150px"></a>
+      <a href="exhibition.html" id="aboutme">EXPOSITIONS</a>
+        <a href="aboutme.html" id="aboutme">À PROPOS DE MOI</a>
+    </div>
+    </header>
+
+    <main>
+<div class="container">
+    <div id="paypalBTN">
+
+        <script>
+            paypal.Buttons({
+                createOrder: function(data, actions){
+                    return actions.order.create({
+                        purchase_units: [{
+                            //Listes de mes produits en ventes
+                            amount: {
+                                value:'0.01'
+                            } 
+                        }]
+                    });
+                },
+                onApprove: function(data, actions){
+                    return actions.order.capture().then(function(details){
+                        alert("Transaction OK : "+details.payer.name.giver_name);
+                    })
+                },
+                onError: function(err){
+                    console.error('Payment Error :', err);
+                    alert("Paiement échoué !");
+                },
+            }).render("#paypalBTN")
+        </script>
+
+    </div>
+</div>
+</main>
+</body>
+</html>

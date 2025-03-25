@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+#lang {
+    display: flex;
+    justify-content: flex-end; /* Aligne le contenu à droite */
+    margin-right: 20px;
+    position: absolute;
+    top: 40px; /* Fais descendre l'image de 60 pixels */
+    right: 0; /* Assure que l'élément est aligné à droite de la page */
+    text-decoration: none;
+}
+
+#lang i {
+    padding-right: 5px;
+}
+
+#lang:hover {
+    color: #EADED2;
+}
+
+
+
+header {
+    text-align: center;
+}
+
+header img {
+    width: 90px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-evenly;
+}
+
+
+.header-container i:hover {
+    color: #EADED2;
+}
+
+header a {
+    font-size: 1.1em;
+    color: black;
+}
+
+#aboutme {
+    text-decoration: none;
+}
+
+#aboutme:hover {
+    color: #EADED2;
+}
+
+#aboutme {
+    text-decoration: none;
+}
+
+#aboutme:hover {
+    color: #EADED2;
+}
+
+/*======================================*/
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.4rem;
+    letter-spacing: 0.06rem;
+}
+
+
+
+/*======================================*/
+
+.contact a {
+    margin-left: 15px;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #B86A69;
+}
+
+
+.contact nav {
+    display: flex;
+    justify-content: left;
+}
+
+/*=================Animation====================*/
+
+
+.container img {
+    animation: slideIMG 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIMG {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.container p {
+    animation: textOpacity 2s, activateHover 3s forwards;;
+    animation-fill-mode: forwards;
+    pointer-events: none; /* Désactive le hover initialement */
+}
+
+@keyframes textOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes activateHover  {
+    100% {
+        pointer-events: all; /* Active le hover après 3 secondes */
+    }
+}
+
+.container p {
+    transition: 5s ease-out;
+}
+
+.container p:hover {
+    scale: 1.1;
+}
